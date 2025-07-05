@@ -1,0 +1,217 @@
+/* Base reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}   
+
+body {
+  font-family: Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: #f347cb;
+  color: #eeebeb;
+  transition:background-color 0.3s ease, color 0.3s;
+  
+}
+
+/* Light & Dark Modes */
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 1.5em;
+
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a,
+.inks button {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hero {
+    text-align:center;
+    padding: 80px 20px;
+    background-color: #ece0ff;
+}
+
+.hero h2{
+    font-size: 2.5em;
+
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #555
+}
+
+.content {
+    max-width:900px;
+    margin:0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    color: rebeccapurple;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+}
+
+.skill-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+}
+
+.skill-list span {
+    background: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+
+}
+
+.btn.primary {
+    background-color: #f347cb;
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #e02a9f;
+
+}
+
+.btn.secondary {
+    background-color: #ddd;
+    color: black;
+}
+
+.btn.secondary {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.btn.secondary:hover {
+    background-color: #bbb;
+
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+}   
+
+textarea {
+    resize: vertical;
+}
+
+#scrollTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f347cb;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #eee;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project {
+        margin-bottom: 10px;
+    }
+}
+
+
+/*Fade in page sections*/
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Prpject card pulse on hover */
+.project:hover {
+    animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulseSharow {
+    0% {
+        box-shadow: 0 0 10px rgba(243, 71, 203, 0.5);  
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(243, 71, 203, 1);
+    }
+}
+
